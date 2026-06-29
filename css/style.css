@@ -1471,7 +1471,7 @@ body.menu-open .drawer-signup-button {
   width: 100%;
   background: #ffffff;
   color: #070707;
-  padding: 60px 0 60px;
+  padding: 60px 0 120px;
 }
 
 .solution-container {
@@ -1914,7 +1914,7 @@ body.menu-open .drawer-signup-button {
   width: 100%;
   background: #070707;
   color: #ffffff;
-  padding: 86px 0 82px;
+  padding: 120px 0 120px;
   overflow: hidden;
 }
 
@@ -2204,7 +2204,7 @@ body.menu-open .drawer-signup-button {
 /* ==================== Latest Responsive: 1400px+ Start ==================== */
 @media (min-width: 1400px) {
   .latest-section {
-    padding: 90px 0 86px;
+    padding: 120px 0 120px;
   }
 
   .latest-container {
@@ -2225,7 +2225,7 @@ body.menu-open .drawer-signup-button {
 /* ==================== Latest Responsive: Laptop Start ==================== */
 @media (max-width: 1180px) {
   .latest-section {
-    padding: 78px 0 76px;
+    padding: 120px 0 120px;
   }
 
   .latest-container {
@@ -2262,7 +2262,7 @@ body.menu-open .drawer-signup-button {
 /* ==================== Latest Responsive: Tablet Start ==================== */
 @media (max-width: 900px) {
   .latest-section {
-    padding: 68px 0 70px;
+    padding: 120px 0 120px;
   }
 
   .latest-container {
