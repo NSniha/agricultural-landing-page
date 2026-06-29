@@ -278,3 +278,13 @@ if (ctaForm && ctaEmail && ctaMessage) {
   });
 }
 /* ==================== CTA Form Functionality End ==================== */
+
+
+
+/* ==================== Footer Auto Year Start ==================== */
+const footerYear = document.querySelector("#footerYear");
+
+if (footerYear) {
+  footerYear.textContent = new Date().getFullYear();
+}
+/* ==================== Footer Auto Year End ==================== */
