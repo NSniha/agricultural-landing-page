@@ -62,3 +62,52 @@ window.addEventListener("scroll", () => {
   }
 });
 /* ==================== Hero Background Parallax End ==================== */
+
+
+
+/* ==================== Counter Animation Start ==================== */
+const counterNumbers = document.querySelectorAll(".counter-number");
+
+function animateCounter(counter) {
+  const target = Number(counter.dataset.target);
+  const suffix = counter.dataset.suffix || "";
+  const duration = 1600;
+  const startTime = performance.now();
+
+  function updateCounter(currentTime) {
+    const elapsedTime = currentTime - startTime;
+    const progress = Math.min(elapsedTime / duration, 1);
+
+    const easedProgress = 1 - Math.pow(1 - progress, 3);
+    const currentValue = Math.floor(easedProgress * target);
+
+    counter.textContent = `${currentValue}${suffix}`;
+
+    if (progress < 1) {
+      requestAnimationFrame(updateCounter);
+    } else {
+      counter.textContent = `${target}${suffix}`;
+    }
+  }
+
+  requestAnimationFrame(updateCounter);
+}
+
+const counterObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.45,
+  }
+);
+
+counterNumbers.forEach((counter) => {
+  counterObserver.observe(counter);
+});
+/* ==================== Counter Animation End ==================== */
