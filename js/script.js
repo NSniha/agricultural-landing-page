@@ -238,3 +238,43 @@ testimonialTracks.forEach((track) => {
   track.dataset.cloned = "true";
 });
 /* ==================== Testimonial Infinite Marquee End ==================== */
+
+
+
+/* ==================== CTA Form Functionality Start ==================== */
+const ctaForm = document.querySelector("#ctaForm");
+const ctaEmail = document.querySelector("#ctaEmail");
+const ctaMessage = document.querySelector("#ctaMessage");
+
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+if (ctaForm && ctaEmail && ctaMessage) {
+  ctaForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const emailValue = ctaEmail.value.trim();
+
+    ctaMessage.classList.remove("is-error", "is-success");
+
+    if (!emailValue) {
+      ctaMessage.textContent = "Please enter your email address.";
+      ctaMessage.classList.add("is-error");
+      ctaEmail.focus();
+      return;
+    }
+
+    if (!isValidEmail(emailValue)) {
+      ctaMessage.textContent = "Please enter a valid email address.";
+      ctaMessage.classList.add("is-error");
+      ctaEmail.focus();
+      return;
+    }
+
+    ctaMessage.textContent = "Thank you! You have joined the agricultural revolution.";
+    ctaMessage.classList.add("is-success");
+    ctaForm.reset();
+  });
+}
+/* ==================== CTA Form Functionality End ==================== */

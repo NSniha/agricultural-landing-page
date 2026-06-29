@@ -2826,3 +2826,331 @@ body.menu-open .drawer-signup-button {
 }
 /* ==================== Testimonial Responsive: Small Mobile End ==================== */
 /* ==================== Customer Testimonial Section End ==================== */
+
+
+
+
+/* ==================== CTA Join Section Start ==================== */
+.cta-section {
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+  padding: 110px 0 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.16) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url("../images/cta-bg.png") center center / cover no-repeat;
+  color: #ffffff;
+}
+
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 50% 48%,
+      rgba(255, 255, 255, 0.04) 0%,
+      transparent 36%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.16) 0%,
+      rgba(0, 0, 0, 0.08) 50%,
+      rgba(0, 0, 0, 0.16) 100%
+    );
+}
+
+.cta-container {
+  position: relative;
+  z-index: 2;
+  width: min(calc(100% - 112px), 1328px);
+  margin-inline: auto;
+}
+
+.cta-content {
+  max-width: 720px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-family: var(--font-main);
+  font-size: clamp(58px, 5.55vw, 78px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.07em;
+  color: #ffffff;
+}
+
+.cta-content h2 span {
+  display: block;
+}
+
+.cta-content p {
+  max-width: 610px;
+  margin: 22px auto 0;
+
+  font-family: var(--font-main);
+  font-size: clamp(18px, 1.36vw, 20px);
+  font-weight: 400;
+  line-height: 1.42;
+  letter-spacing: -0.04em;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.cta-form {
+  width: min(386px, 100%);
+  height: 48px;
+  margin: 42px auto 0;
+  padding: 4px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.16);
+
+  transform: translateY(0);
+  transition:
+    box-shadow var(--transition-smooth),
+    transform var(--transition-smooth);
+}
+
+.cta-form:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+.cta-form input {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  padding: 0 0 0 13px;
+
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #07110a;
+
+  font-family: var(--font-main);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.cta-form input::placeholder {
+  color: #707070;
+}
+
+.cta-form button {
+  height: 40px;
+  min-width: 138px;
+  padding-inline: 20px 15px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  border-radius: 999px;
+  background: var(--color-lime);
+  color: #07110a;
+
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.035em;
+
+  transition:
+    transform var(--transition-smooth),
+    background-color var(--transition-smooth);
+}
+
+.cta-form button span {
+  font-size: 26px;
+  line-height: 0;
+  transform: translateY(-1px);
+  transition: transform var(--transition-smooth);
+}
+
+.cta-form button:hover {
+  transform: translateY(-1px);
+  background: #bfff18;
+}
+
+.cta-form button:hover span {
+  transform: translate(5px, -1px);
+}
+
+.cta-message {
+  margin-top: 14px !important;
+
+  font-size: 14px !important;
+  line-height: 1.35 !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.cta-message.is-error {
+  color: #ffd0d0 !important;
+}
+
+.cta-message.is-success {
+  color: #dfff9a !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+/* ==================== CTA Join Section End ==================== */
+
+
+/* ==================== CTA Responsive: 1400px+ Start ==================== */
+@media (min-width: 1400px) {
+  .cta-section {
+    min-height: 480px;
+    padding: 110px 0 110px;
+  }
+
+  .cta-container {
+    width: min(calc(100% - 112px), 1328px);
+  }
+
+  .cta-content h2 {
+    font-size: 78px;
+  }
+}
+/* ==================== CTA Responsive: 1400px+ End ==================== */
+
+
+/* ==================== CTA Responsive: Laptop Start ==================== */
+@media (max-width: 1180px) {
+  .cta-section {
+    min-height: 480px;
+  }
+
+  .cta-container {
+    width: min(calc(100% - 72px), 1120px);
+  }
+
+  .cta-content h2 {
+    font-size: clamp(52px, 6vw, 70px);
+  }
+
+  .cta-content p {
+    font-size: clamp(17px, 1.35vw, 19px);
+  }
+}
+/* ==================== CTA Responsive: Laptop End ==================== */
+
+
+/* ==================== CTA Responsive: Tablet Start ==================== */
+@media (max-width: 900px) {
+  .cta-section {
+    min-height: 430px;
+    background-position: center center;
+  }
+
+  .cta-container {
+    width: calc(100% - 48px);
+  }
+
+  .cta-content h2 {
+    font-size: clamp(42px, 7vw, 56px);
+    line-height: 1.08;
+  }
+
+  .cta-content p {
+    max-width: 600px;
+    margin-top: 18px;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .cta-form {
+    margin-top: 34px;
+  }
+}
+/* ==================== CTA Responsive: Tablet End ==================== */
+
+
+/* ==================== CTA Responsive: Mobile Start ==================== */
+@media (max-width: 560px) {
+  .cta-section {
+    min-height: 430px;
+    background-position: center center;
+  }
+
+  .cta-container {
+    width: calc(100% - 32px);
+  }
+
+  .cta-content h2 {
+    font-size: clamp(34px, 10vw, 42px);
+    line-height: 1.1;
+    letter-spacing: -0.065em;
+  }
+
+  .cta-content p {
+    margin-top: 14px;
+    font-size: 15.8px;
+    line-height: 1.55;
+    letter-spacing: -0.025em;
+  }
+
+  .cta-form {
+    height: auto;
+    margin-top: 30px;
+    padding: 5px;
+    flex-direction: column;
+    border-radius: 24px;
+  }
+
+  .cta-form input {
+    height: 44px;
+    padding-inline: 15px;
+    text-align: center;
+  }
+
+  .cta-form button {
+    width: 100%;
+    height: 44px;
+    font-size: 15px;
+  }
+}
+/* ==================== CTA Responsive: Mobile End ==================== */
+
+
+/* ==================== CTA Responsive: Small Mobile Start ==================== */
+@media (max-width: 380px) {
+  .cta-container {
+    width: calc(100% - 28px);
+  }
+
+  .cta-content h2 {
+    font-size: 31px;
+  }
+
+  .cta-content p {
+    font-size: 15px;
+  }
+}
+/* ==================== CTA Responsive: Small Mobile End ==================== */
