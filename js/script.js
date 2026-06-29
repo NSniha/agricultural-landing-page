@@ -218,3 +218,23 @@ if (latestSlider && latestTrack && latestPrev && latestNext) {
   window.addEventListener("load", () => updateLatestSlider(false));
 }
 /* ==================== Latest Blog Slider End ==================== */
+
+
+
+/* ==================== Testimonial Infinite Marquee Start ==================== */
+const testimonialTracks = document.querySelectorAll(".testimonial-track");
+
+testimonialTracks.forEach((track) => {
+  if (track.dataset.cloned === "true") return;
+
+  const cards = Array.from(track.children);
+
+  cards.forEach((card) => {
+    const clonedCard = card.cloneNode(true);
+    clonedCard.setAttribute("aria-hidden", "true");
+    track.appendChild(clonedCard);
+  });
+
+  track.dataset.cloned = "true";
+});
+/* ==================== Testimonial Infinite Marquee End ==================== */
