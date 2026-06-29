@@ -17,7 +17,7 @@
 
 ---
 
-## 📌 Overview
+## Overview
 
 **TaniSmart** is a modern, fully responsive agricultural technology landing page. It presents an agri-tech brand's mission — empowering farmers with cutting-edge tools, sustainable practices, and data-driven solutions. Built entirely with **HTML5**, **CSS3**, and **Vanilla JavaScript**, the site delivers a clean, professional UI without any framework dependency.
 
@@ -25,13 +25,13 @@
 
 ---
 
-## 🌐 Live Demo
+## Live Demo
 
-🔗 **[https://beautiful-donut-bcb384.netlify.app/](https://beautiful-donut-bcb384.netlify.app/)**
+**[https://beautiful-donut-bcb384.netlify.app/](https://beautiful-donut-bcb384.netlify.app/)**
 
 ---
 
-## ✨ Features
+## Features
 
 - **Hero Section** — Full-screen banner with CTA buttons and smooth intro animations
 - **Stats Counter** — Animated display of key metrics (100% satisfaction, 20+ years, 160K+ farmers)

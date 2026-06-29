@@ -73,7 +73,7 @@ button {
 .hero-section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 800px;
   overflow: hidden;
   isolation: isolate;
 
@@ -968,7 +968,7 @@ body.menu-open .drawer-signup-button {
   }
 
   .hero-content h1 {
-    font-size: 38px;
+    font-size: 36px;
   }
 
   .hero-content p {
@@ -3120,7 +3120,6 @@ body.menu-open .drawer-signup-button {
     height: auto;
     margin-top: 30px;
     padding: 5px;
-    flex-direction: column;
     border-radius: 24px;
   }
 
@@ -3528,6 +3527,11 @@ body.menu-open .drawer-signup-button {
 
   .footer-meta {
     margin-top: 52px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
   }
 
   .footer-meta p,
@@ -3538,15 +3542,14 @@ body.menu-open .drawer-signup-button {
 
   .footer-legal {
     align-items: flex-start;
-    flex-direction: column;
-    gap: 12px;
+    gap: 34px;
   }
 
   .footer-big-brand {
     margin-top: 30px;
-    font-size: clamp(64px, 21.8vw, 112px);
+    font-size: clamp(54px, 18.8vw, 80px);
     line-height: 0.92;
-    letter-spacing: -0.1em;
+    letter-spacing: 0;
   }
 }
 /* ==================== Footer Responsive: Mobile End ==================== */
