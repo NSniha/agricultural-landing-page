@@ -1905,3 +1905,538 @@ body.menu-open .drawer-signup-button {
 }
 /* ==================== Solution Responsive: Small Mobile End ==================== */
 /* ==================== Agriculture Solution Section End ==================== */
+
+
+
+
+/* ==================== Latest Agriculture Info Section Start ==================== */
+.latest-section {
+  width: 100%;
+  background: #070707;
+  color: #ffffff;
+  padding: 86px 0 82px;
+  overflow: hidden;
+}
+
+.latest-container {
+  width: min(calc(100% - 112px), 1328px);
+  margin-inline: auto;
+}
+
+/* ==================== Latest Header Start ==================== */
+.latest-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.latest-heading-wrap {
+  max-width: 720px;
+}
+
+.latest-heading-wrap h2 {
+  font-family: var(--font-main);
+  font-size: clamp(46px, 4.1vw, 58px);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.065em;
+  color: #ffffff;
+}
+
+.latest-heading-wrap h2 span {
+  display: block;
+}
+
+.latest-heading-wrap p {
+  max-width: 650px;
+  margin-top: 24px;
+
+  font-family: var(--font-main);
+  font-size: clamp(18px, 1.36vw, 20px);
+  font-weight: 400;
+  line-height: 1.42;
+  letter-spacing: -0.04em;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.latest-controls {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding-bottom: 1px;
+}
+
+.latest-arrow {
+  width: 45px;
+  height: 45px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  background: transparent;
+  color: #ffffff;
+
+  font-size: 25px;
+  line-height: 1;
+
+  transition:
+    color var(--transition-smooth),
+    background-color var(--transition-smooth),
+    border-color var(--transition-smooth),
+    transform var(--transition-smooth);
+}
+
+.latest-arrow:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-lime);
+  background: var(--color-lime);
+  color: #07110a;
+}
+/* ==================== Latest Header End ==================== */
+
+
+/* ==================== Latest Slider Start ==================== */
+.latest-slider {
+  width: 100%;
+  margin-top: 64px;
+  overflow: hidden;
+}
+
+.latest-track {
+  display: flex;
+  gap: 16px;
+  will-change: transform;
+  transform: translateX(0);
+  transition: transform 0.72s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.latest-card {
+  min-width: 0;
+  flex: 0 0 calc((100% - 32px) / 3);
+}
+
+.latest-image-wrap {
+  position: relative;
+  width: 100%;
+  height: clamp(400px, 36.2vw, 498px);
+
+  display: block;
+  overflow: hidden;
+  background: #172112;
+}
+
+.latest-image-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7, 7, 7, 0.04) 0%,
+      rgba(7, 7, 7, 0.1) 100%
+    );
+  opacity: 0;
+  transition: opacity var(--transition-smooth);
+}
+
+.latest-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transform: scale(1.001);
+  transition:
+    transform 1.15s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 1.15s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.latest-card:hover .latest-image-wrap::after {
+  opacity: 1;
+}
+
+.latest-card:hover .latest-image-wrap img {
+  transform: scale(1.055);
+  filter: saturate(1.06) contrast(1.03);
+}
+
+.latest-card-body {
+  padding-top: 24px;
+}
+
+.latest-card h3 {
+  max-width: 410px;
+
+  font-family: var(--font-main);
+  font-size: clamp(24px, 2.05vw, 30px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.06em;
+  color: #ffffff;
+}
+
+.latest-card p {
+  max-width: 405px;
+  margin-top: 15px;
+
+  font-family: var(--font-main);
+  font-size: clamp(15px, 1.08vw, 16px);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.018em;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.latest-card time {
+  display: block;
+  margin-top: 19px;
+
+  font-family: var(--font-main);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.018em;
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.latest-read-btn {
+  min-width: 144px;
+  height: 45px;
+  margin-top: 34px;
+  padding-inline: 21px 17px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  border-radius: 999px;
+  background: #ffffff;
+  color: #070707;
+
+  font-family: var(--font-main);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+
+  transition:
+    transform var(--transition-smooth),
+    background-color var(--transition-smooth),
+    color var(--transition-smooth);
+}
+
+.latest-read-btn span {
+  font-size: 27px;
+  line-height: 0;
+  transform: translateY(-1px);
+  transition: transform var(--transition-smooth);
+}
+
+.latest-read-btn:hover {
+  transform: translateY(-3px);
+  background: var(--color-lime);
+  color: #07110a;
+}
+
+.latest-read-btn:hover span {
+  transform: translate(5px, -1px);
+}
+/* ==================== Latest Slider End ==================== */
+
+
+/* ==================== Latest Animation Start ==================== */
+.latest-section .scroll-reveal {
+  opacity: 0;
+  transform: translateY(42px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.latest-section .scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.latest-heading-wrap.scroll-reveal {
+  transition-delay: 0.04s;
+}
+
+.latest-controls.scroll-reveal {
+  transition-delay: 0.12s;
+}
+
+.latest-card:nth-child(1) {
+  transition-delay: 0.08s;
+}
+
+.latest-card:nth-child(2) {
+  transition-delay: 0.14s;
+}
+
+.latest-card:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.latest-card:nth-child(4) {
+  transition-delay: 0.26s;
+}
+
+.latest-card:nth-child(5) {
+  transition-delay: 0.32s;
+}
+
+.latest-card:nth-child(6) {
+  transition-delay: 0.38s;
+}
+
+.latest-card:nth-child(7) {
+  transition-delay: 0.44s;
+}
+/* ==================== Latest Animation End ==================== */
+
+
+/* ==================== Latest Responsive: 1400px+ Start ==================== */
+@media (min-width: 1400px) {
+  .latest-section {
+    padding: 90px 0 86px;
+  }
+
+  .latest-container {
+    width: min(calc(100% - 112px), 1328px);
+  }
+
+  .latest-heading-wrap h2 {
+    font-size: 58px;
+  }
+
+  .latest-slider {
+    margin-top: 64px;
+  }
+}
+/* ==================== Latest Responsive: 1400px+ End ==================== */
+
+
+/* ==================== Latest Responsive: Laptop Start ==================== */
+@media (max-width: 1180px) {
+  .latest-section {
+    padding: 78px 0 76px;
+  }
+
+  .latest-container {
+    width: min(calc(100% - 72px), 1120px);
+  }
+
+  .latest-heading-wrap h2 {
+    font-size: clamp(42px, 4.8vw, 54px);
+  }
+
+  .latest-heading-wrap p {
+    font-size: clamp(17px, 1.35vw, 19px);
+  }
+
+  .latest-track {
+    gap: 14px;
+  }
+
+  .latest-card {
+    flex-basis: calc((100% - 28px) / 3);
+  }
+
+  .latest-image-wrap {
+    height: clamp(330px, 34vw, 430px);
+  }
+
+  .latest-card h3 {
+    font-size: clamp(22px, 2.4vw, 27px);
+  }
+}
+/* ==================== Latest Responsive: Laptop End ==================== */
+
+
+/* ==================== Latest Responsive: Tablet Start ==================== */
+@media (max-width: 900px) {
+  .latest-section {
+    padding: 68px 0 70px;
+  }
+
+  .latest-container {
+    width: calc(100% - 48px);
+  }
+
+  .latest-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 34px;
+  }
+
+  .latest-heading-wrap {
+    max-width: 650px;
+  }
+
+  .latest-heading-wrap h2 {
+    font-size: clamp(38px, 6.5vw, 48px);
+    line-height: 1.06;
+  }
+
+  .latest-heading-wrap p {
+    max-width: 620px;
+    margin-top: 18px;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .latest-controls {
+    padding-bottom: 0;
+  }
+
+  .latest-slider {
+    margin-top: 46px;
+  }
+
+  .latest-track {
+    gap: 18px;
+  }
+
+  .latest-card {
+    flex: 0 0 min(72vw, 430px);
+  }
+
+  .latest-image-wrap {
+    height: clamp(320px, 58vw, 430px);
+  }
+
+  .latest-card h3 {
+    max-width: 100%;
+    font-size: clamp(24px, 4vw, 30px);
+  }
+
+  .latest-card p {
+    max-width: 100%;
+    font-size: 15.5px;
+    line-height: 1.55;
+  }
+}
+/* ==================== Latest Responsive: Tablet End ==================== */
+
+
+/* ==================== Latest Responsive: Mobile Start ==================== */
+@media (max-width: 560px) {
+  .latest-section {
+    padding: 58px 0 62px;
+  }
+
+  .latest-container {
+    width: calc(100% - 32px);
+  }
+
+  .latest-header {
+    gap: 28px;
+  }
+
+  .latest-heading-wrap h2 {
+    font-size: clamp(32px, 9.4vw, 38px);
+    line-height: 1.08;
+    letter-spacing: -0.065em;
+  }
+
+  .latest-heading-wrap p {
+    margin-top: 14px;
+    font-size: 15.8px;
+    line-height: 1.55;
+    letter-spacing: -0.025em;
+  }
+
+  .latest-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 23px;
+  }
+
+  .latest-slider {
+    margin-top: 38px;
+  }
+
+  .latest-track {
+    gap: 16px;
+  }
+
+  .latest-card {
+    flex: 0 0 min(86vw, 390px);
+  }
+
+  .latest-image-wrap {
+    height: clamp(300px, 88vw, 390px);
+  }
+
+  .latest-card-body {
+    padding-top: 21px;
+  }
+
+  .latest-card h3 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .latest-card p {
+    margin-top: 13px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .latest-card time {
+    margin-top: 17px;
+    font-size: 13.5px;
+  }
+
+  .latest-read-btn {
+    min-width: 138px;
+    height: 44px;
+    margin-top: 28px;
+    font-size: 14px;
+  }
+}
+/* ==================== Latest Responsive: Mobile End ==================== */
+
+
+/* ==================== Latest Responsive: Small Mobile Start ==================== */
+@media (max-width: 380px) {
+  .latest-section {
+    padding-top: 52px;
+  }
+
+  .latest-container {
+    width: calc(100% - 28px);
+  }
+
+  .latest-heading-wrap h2 {
+    font-size: 31px;
+  }
+
+  .latest-heading-wrap p {
+    font-size: 15px;
+  }
+
+  .latest-card {
+    flex: 0 0 min(88vw, 350px);
+  }
+
+  .latest-image-wrap {
+    height: 285px;
+  }
+
+  .latest-card h3 {
+    font-size: 22px;
+  }
+
+  .latest-card p {
+    font-size: 14.5px;
+  }
+}
+/* ==================== Latest Responsive: Small Mobile End ==================== */
+/* ==================== Latest Agriculture Info Section End ==================== */

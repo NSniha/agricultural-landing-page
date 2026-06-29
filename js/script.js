@@ -114,3 +114,107 @@ counterNumbers.forEach((counter) => {
 
 
 
+/* ==================== Latest Blog Slider Start ==================== */
+const latestSlider = document.querySelector(".latest-slider");
+const latestTrack = document.querySelector(".latest-track");
+const latestPrev = document.querySelector(".latest-prev");
+const latestNext = document.querySelector(".latest-next");
+
+let latestCurrentIndex = 0;
+let latestIsAnimating = false;
+
+function getLatestGap() {
+  if (!latestTrack) return 16;
+
+  const trackStyle = window.getComputedStyle(latestTrack);
+  return parseFloat(trackStyle.columnGap || trackStyle.gap) || 16;
+}
+
+function getLatestCardWidth() {
+  const card = latestTrack?.querySelector(".latest-card");
+  return card ? card.getBoundingClientRect().width : 0;
+}
+
+function getLatestVisibleCount() {
+  if (!latestSlider || !latestTrack) return 1;
+
+  const sliderWidth = latestSlider.getBoundingClientRect().width;
+  const cardWidth = getLatestCardWidth();
+  const gap = getLatestGap();
+
+  if (!cardWidth) return 1;
+
+  return Math.max(1, Math.floor((sliderWidth + gap) / (cardWidth + gap)));
+}
+
+function getLatestMaxIndex() {
+  const totalCards = latestTrack ? latestTrack.children.length : 0;
+  const visibleCards = getLatestVisibleCount();
+
+  return Math.max(0, totalCards - visibleCards);
+}
+
+function updateLatestSlider(animate = true) {
+  if (!latestTrack) return;
+
+  const cardWidth = getLatestCardWidth();
+  const gap = getLatestGap();
+  const moveAmount = latestCurrentIndex * (cardWidth + gap);
+
+  latestTrack.style.transition = animate
+    ? "transform 0.72s cubic-bezier(0.22, 1, 0.36, 1)"
+    : "none";
+
+  latestTrack.style.transform = `translateX(-${moveAmount}px)`;
+}
+
+function goToLatestNext() {
+  if (!latestTrack || latestIsAnimating) return;
+
+  latestIsAnimating = true;
+
+  const maxIndex = getLatestMaxIndex();
+
+  latestCurrentIndex = latestCurrentIndex >= maxIndex ? 0 : latestCurrentIndex + 1;
+  updateLatestSlider(true);
+
+  window.setTimeout(() => {
+    latestIsAnimating = false;
+  }, 740);
+}
+
+function goToLatestPrev() {
+  if (!latestTrack || latestIsAnimating) return;
+
+  latestIsAnimating = true;
+
+  const maxIndex = getLatestMaxIndex();
+
+  latestCurrentIndex = latestCurrentIndex <= 0 ? maxIndex : latestCurrentIndex - 1;
+  updateLatestSlider(true);
+
+  window.setTimeout(() => {
+    latestIsAnimating = false;
+  }, 740);
+}
+
+function resetLatestOnResize() {
+  if (!latestTrack) return;
+
+  const maxIndex = getLatestMaxIndex();
+
+  if (latestCurrentIndex > maxIndex) {
+    latestCurrentIndex = maxIndex;
+  }
+
+  updateLatestSlider(false);
+}
+
+if (latestSlider && latestTrack && latestPrev && latestNext) {
+  latestNext.addEventListener("click", goToLatestNext);
+  latestPrev.addEventListener("click", goToLatestPrev);
+
+  window.addEventListener("resize", resetLatestOnResize);
+  window.addEventListener("load", () => updateLatestSlider(false));
+}
+/* ==================== Latest Blog Slider End ==================== */
