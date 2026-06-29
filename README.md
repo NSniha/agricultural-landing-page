@@ -21,6 +21,9 @@
 
 **TaniSmart** is a modern, fully responsive agricultural technology landing page. It presents an agri-tech brand's mission — empowering farmers with cutting-edge tools, sustainable practices, and data-driven solutions. Built entirely with **HTML5**, **CSS3**, and **Vanilla JavaScript**, the site delivers a clean, professional UI without any framework dependency.
 
+![Uploading Tanismart_Agricultral_Landing_page_using_HTML_CSS_VAnila_Javascript.png…]()
+
+
 > *"Where tradition meets innovation — committed to transforming the agricultural industry through sustainable practices and cutting-edge technology."*
 
 ---
