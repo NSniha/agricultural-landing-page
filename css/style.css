@@ -1090,3 +1090,404 @@ body.menu-open .drawer-signup-button {
   }
 }
 /* ==================== Responsive: Extra Small Mobile End ==================== */
+
+
+
+
+/* ==================== Future Agriculture Section Start ==================== */
+.future-section {
+  width: 100%;
+  background: #ffffff;
+  color: #070707;
+  padding: 86px 0 66px;
+}
+
+.future-container {
+  width: min(calc(100% - 112px), 1328px);
+  margin-inline: auto;
+}
+
+/* ==================== Future Top Content Start ==================== */
+.future-top {
+  display: grid;
+  grid-template-columns: 0.95fr 1fr;
+  align-items: start;
+  gap: clamp(72px, 10vw, 146px);
+}
+
+.future-heading-wrap h2 {
+  max-width: 590px;
+
+  font-family: var(--font-main);
+  font-size: clamp(46px, 4.1vw, 58px);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.065em;
+  color: #070707;
+}
+
+.future-heading-wrap h2 span {
+  display: block;
+}
+
+.future-content {
+  max-width: 640px;
+}
+
+.future-lead,
+.future-text {
+  font-family: var(--font-main);
+  font-size: clamp(18px, 1.36vw, 20px);
+  font-weight: 400;
+  line-height: 1.42;
+  letter-spacing: -0.04em;
+}
+
+.future-lead {
+  color: #101010;
+}
+
+.future-text {
+  max-width: 620px;
+  margin-top: 30px;
+  color: #636363;
+}
+
+.future-link {
+  position: relative;
+  width: max-content;
+  margin-top: 64px;
+  padding-bottom: 8px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  color: #0a0a0a;
+}
+
+.future-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 1px;
+  background: #111111;
+  transform-origin: left;
+  transition: transform var(--transition-smooth);
+}
+
+.future-link span {
+  font-size: 27px;
+  line-height: 0;
+  transform: translateY(-1px);
+  transition: transform var(--transition-smooth);
+}
+
+.future-link:hover::after {
+  transform: scaleX(0.58);
+}
+
+.future-link:hover span {
+  transform: translate(6px, -1px);
+}
+/* ==================== Future Top Content End ==================== */
+
+
+/* ==================== Future Stats Start ==================== */
+.future-stats {
+  margin-top: 112px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(64px, 8vw, 106px);
+}
+
+.future-stat-card {
+  max-width: 408px;
+}
+
+.future-stat-card h3 {
+  font-family: var(--font-main);
+  font-size: clamp(60px, 5.2vw, 72px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.08em;
+  color: #050505;
+}
+
+.future-stat-card h4 {
+  margin-top: 22px;
+
+  font-family: var(--font-main);
+  font-size: clamp(18px, 1.36vw, 20px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.045em;
+  color: #101010;
+}
+
+.future-stat-card p {
+  margin-top: 20px;
+
+  font-family: var(--font-main);
+  font-size: clamp(15px, 1.08vw, 16px);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.018em;
+  color: #626262;
+}
+/* ==================== Future Stats End ==================== */
+
+
+/* ==================== Future Animation Start ==================== */
+.future-section .scroll-reveal {
+  opacity: 0;
+  transform: translateY(42px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.future-section .scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.future-heading-wrap.scroll-reveal {
+  transition-delay: 0.04s;
+}
+
+.future-content.scroll-reveal {
+  transition-delay: 0.12s;
+}
+
+.future-stat-card:nth-child(1) {
+  transition-delay: 0.08s;
+}
+
+.future-stat-card:nth-child(2) {
+  transition-delay: 0.16s;
+}
+
+.future-stat-card:nth-child(3) {
+  transition-delay: 0.24s;
+}
+/* ==================== Future Animation End ==================== */
+
+
+/* ==================== Future Responsive: 1400px+ Start ==================== */
+@media (min-width: 1400px) {
+  .future-section {
+    padding: 86px 0 66px;
+  }
+
+  .future-container {
+    width: min(calc(100% - 112px), 1328px);
+  }
+
+  .future-heading-wrap h2 {
+    font-size: 58px;
+  }
+
+  .future-stats {
+    margin-top: 114px;
+  }
+}
+/* ==================== Future Responsive: 1400px+ End ==================== */
+
+
+/* ==================== Future Responsive: Laptop Start ==================== */
+@media (max-width: 1180px) {
+  .future-section {
+    padding: 78px 0 62px;
+  }
+
+  .future-container {
+    width: min(calc(100% - 72px), 1120px);
+  }
+
+  .future-top {
+    gap: 68px;
+  }
+
+  .future-heading-wrap h2 {
+    font-size: clamp(42px, 4.8vw, 54px);
+  }
+
+  .future-stats {
+    margin-top: 94px;
+    gap: 48px;
+  }
+
+  .future-stat-card h3 {
+    font-size: clamp(56px, 5.4vw, 68px);
+  }
+}
+/* ==================== Future Responsive: Laptop End ==================== */
+
+
+/* ==================== Future Responsive: Tablet Start ==================== */
+@media (max-width: 900px) {
+  .future-section {
+    padding: 68px 0 58px;
+  }
+
+  .future-container {
+    width: calc(100% - 48px);
+  }
+
+  .future-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .future-heading-wrap h2 {
+    max-width: 620px;
+    font-size: clamp(38px, 6.5vw, 48px);
+    line-height: 1.06;
+  }
+
+  .future-content {
+    max-width: 100%;
+  }
+
+  .future-lead,
+  .future-text {
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .future-text {
+    margin-top: 24px;
+  }
+
+  .future-link {
+    margin-top: 38px;
+  }
+
+  .future-stats {
+    margin-top: 72px;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .future-stat-card {
+    max-width: 620px;
+  }
+
+  .future-stat-card h3 {
+    font-size: clamp(52px, 9vw, 64px);
+  }
+}
+/* ==================== Future Responsive: Tablet End ==================== */
+
+
+/* ==================== Future Responsive: Mobile Start ==================== */
+@media (max-width: 560px) {
+  .future-section {
+    padding: 58px 0 50px;
+  }
+
+  .future-container {
+    width: calc(100% - 32px);
+  }
+
+  .future-top {
+    gap: 26px;
+  }
+
+  .future-heading-wrap h2 {
+    font-size: clamp(32px, 9.4vw, 38px);
+    line-height: 1.08;
+    letter-spacing: -0.065em;
+  }
+
+  .future-lead,
+  .future-text {
+    font-size: 15.8px;
+    line-height: 1.55;
+    letter-spacing: -0.025em;
+  }
+
+  .future-text {
+    margin-top: 20px;
+  }
+
+  .future-link {
+    margin-top: 30px;
+    font-size: 15px;
+  }
+
+  .future-link span {
+    font-size: 24px;
+  }
+
+  .future-stats {
+    margin-top: 58px;
+    gap: 42px;
+  }
+
+  .future-stat-card h3 {
+    font-size: clamp(48px, 14vw, 58px);
+  }
+
+  .future-stat-card h4 {
+    margin-top: 15px;
+    font-size: 17.5px;
+    line-height: 1.28;
+  }
+
+  .future-stat-card p {
+    margin-top: 14px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+}
+/* ==================== Future Responsive: Mobile End ==================== */
+
+
+/* ==================== Future Responsive: Small Mobile Start ==================== */
+@media (max-width: 380px) {
+  .future-section {
+    padding-top: 52px;
+  }
+
+  .future-container {
+    width: calc(100% - 28px);
+  }
+
+  .future-heading-wrap h2 {
+    font-size: 31px;
+  }
+
+  .future-lead,
+  .future-text {
+    font-size: 15px;
+  }
+
+  .future-stats {
+    margin-top: 52px;
+  }
+
+  .future-stat-card h3 {
+    font-size: 46px;
+  }
+
+  .future-stat-card h4 {
+    font-size: 16.5px;
+  }
+
+  .future-stat-card p {
+    font-size: 14.5px;
+  }
+}
+/* ==================== Future Responsive: Small Mobile End ==================== */
+/* ==================== Future Agriculture Section End ==================== */
