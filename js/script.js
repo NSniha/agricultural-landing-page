@@ -111,3 +111,6 @@ counterNumbers.forEach((counter) => {
   counterObserver.observe(counter);
 });
 /* ==================== Counter Animation End ==================== */
+
+
+

@@ -1491,3 +1491,446 @@ body.menu-open .drawer-signup-button {
 }
 /* ==================== Future Responsive: Small Mobile End ==================== */
 /* ==================== Future Agriculture Section End ==================== */
+
+
+
+/* ==================== Agriculture Solution Section Start ==================== */
+.solution-section {
+  width: 100%;
+  background: #ffffff;
+  color: #070707;
+  padding: 86px 0 74px;
+}
+
+.solution-container {
+  width: min(calc(100% - 112px), 1328px);
+  margin-inline: auto;
+}
+
+/* ==================== Solution Header Start ==================== */
+.solution-header {
+  max-width: 620px;
+}
+
+.solution-header h2 {
+  font-family: var(--font-main);
+  font-size: clamp(46px, 4.1vw, 58px);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: -0.065em;
+  color: #070707;
+}
+
+.solution-header p {
+  max-width: 520px;
+  margin-top: 18px;
+
+  font-family: var(--font-main);
+  font-size: clamp(18px, 1.36vw, 20px);
+  font-weight: 400;
+  line-height: 1.42;
+  letter-spacing: -0.04em;
+  color: #606060;
+}
+/* ==================== Solution Header End ==================== */
+
+
+/* ==================== Solution List Start ==================== */
+.solution-list {
+  margin-top: 76px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+
+.solution-card {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: minmax(420px, 520px) minmax(420px, 520px);
+  align-items: center;
+  justify-content: space-between;
+  column-gap: clamp(90px, 12vw, 210px);
+}
+
+.solution-card-content {
+  max-width: 520px;
+}
+
+.solution-card-content h3 {
+  font-family: var(--font-main);
+  font-size: clamp(26px, 2.05vw, 30px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.06em;
+  color: #070707;
+}
+
+.solution-card-content p {
+  max-width: 500px;
+  margin-top: 17px;
+
+  font-family: var(--font-main);
+  font-size: clamp(15px, 1.08vw, 16px);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.018em;
+  color: #626262;
+}
+
+.solution-link {
+  position: relative;
+  width: max-content;
+  margin-top: 30px;
+  padding-bottom: 8px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  color: #0a0a0a;
+}
+
+.solution-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 1px;
+  background: #111111;
+  transform-origin: left;
+  transition:
+    transform var(--transition-smooth),
+    background-color var(--transition-smooth);
+}
+
+.solution-link span {
+  font-size: 27px;
+  line-height: 0;
+  transform: translateY(-1px);
+  transition: transform var(--transition-smooth);
+}
+
+.solution-link:hover::after {
+  transform: scaleX(0.58);
+}
+
+.solution-link:hover span {
+  transform: translate(6px, -1px);
+}
+
+.solution-image-wrap {
+  justify-self: end;
+
+  width: 520px;
+  height: 302px;
+
+  overflow: hidden;
+  background: #eef1e8;
+}
+
+.solution-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transform: scale(1.001);
+  transition:
+    transform 1.15s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 1.15s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.solution-card:hover .solution-image-wrap img {
+  transform: scale(1.055);
+  filter: saturate(1.06) contrast(1.03);
+}
+/* ==================== Solution List End ==================== */
+
+
+/* ==================== Solution Animation Start ==================== */
+.solution-section .scroll-reveal {
+  opacity: 0;
+  transform: translateY(42px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.solution-section .scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.solution-header.scroll-reveal {
+  transition-delay: 0.04s;
+}
+
+.solution-card:nth-child(1) {
+  transition-delay: 0.08s;
+}
+
+.solution-card:nth-child(2) {
+  transition-delay: 0.16s;
+}
+
+.solution-card:nth-child(3) {
+  transition-delay: 0.24s;
+}
+
+.solution-card:nth-child(4) {
+  transition-delay: 0.32s;
+}
+
+.solution-card .solution-card-content {
+  transition: transform var(--transition-smooth);
+}
+
+.solution-card:hover .solution-card-content {
+  transform: translateX(4px);
+}
+/* ==================== Solution Animation End ==================== */
+
+
+/* ==================== Solution Responsive: 1400px+ Start ==================== */
+@media (min-width: 1400px) {
+  .solution-section {
+    padding: 90px 0 78px;
+  }
+
+  .solution-container {
+    width: min(calc(100% - 112px), 1328px);
+  }
+
+  .solution-header h2 {
+    font-size: 58px;
+  }
+
+  .solution-list {
+    margin-top: 78px;
+  }
+
+  .solution-image-wrap {
+    width: 520px;
+    height: 302px;
+  }
+}
+/* ==================== Solution Responsive: 1400px+ End ==================== */
+
+
+/* ==================== Solution Responsive: Laptop Start ==================== */
+@media (max-width: 1180px) {
+  .solution-section {
+    padding: 78px 0 68px;
+  }
+
+  .solution-container {
+    width: min(calc(100% - 72px), 1120px);
+  }
+
+  .solution-header h2 {
+    font-size: clamp(42px, 4.8vw, 54px);
+  }
+
+  .solution-header p {
+    font-size: clamp(17px, 1.35vw, 19px);
+  }
+
+  .solution-list {
+    margin-top: 68px;
+    gap: 52px;
+  }
+
+  .solution-card {
+    grid-template-columns: minmax(360px, 1fr) minmax(390px, 470px);
+    column-gap: 66px;
+  }
+
+  .solution-image-wrap {
+    width: 100%;
+    max-width: 470px;
+    height: 274px;
+  }
+
+  .solution-card-content h3 {
+    font-size: clamp(25px, 2.4vw, 29px);
+  }
+}
+/* ==================== Solution Responsive: Laptop End ==================== */
+
+
+/* ==================== Solution Responsive: Tablet Start ==================== */
+@media (max-width: 900px) {
+  .solution-section {
+    padding: 68px 0 60px;
+  }
+
+  .solution-container {
+    width: calc(100% - 48px);
+  }
+
+  .solution-header {
+    max-width: 650px;
+  }
+
+  .solution-header h2 {
+    font-size: clamp(38px, 6.5vw, 48px);
+    line-height: 1.06;
+  }
+
+  .solution-header p {
+    max-width: 620px;
+    margin-top: 16px;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  .solution-list {
+    margin-top: 58px;
+    gap: 58px;
+  }
+
+  .solution-card {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .solution-card-content {
+    max-width: 650px;
+    order: 1;
+  }
+
+  .solution-card-content h3 {
+    font-size: clamp(25px, 4vw, 30px);
+  }
+
+  .solution-card-content p {
+    max-width: 650px;
+    margin-top: 15px;
+    font-size: 15.5px;
+    line-height: 1.55;
+  }
+
+  .solution-link {
+    margin-top: 26px;
+  }
+
+  .solution-image-wrap {
+    order: 2;
+    justify-self: stretch;
+
+    width: 100%;
+    max-width: 100%;
+    height: clamp(260px, 48vw, 430px);
+  }
+
+  .solution-card:hover .solution-card-content {
+    transform: none;
+  }
+}
+/* ==================== Solution Responsive: Tablet End ==================== */
+
+
+/* ==================== Solution Responsive: Mobile Start ==================== */
+@media (max-width: 560px) {
+  .solution-section {
+    padding: 58px 0 52px;
+  }
+
+  .solution-container {
+    width: calc(100% - 32px);
+  }
+
+  .solution-header h2 {
+    font-size: clamp(32px, 9.4vw, 38px);
+    line-height: 1.08;
+    letter-spacing: -0.065em;
+  }
+
+  .solution-header p {
+    margin-top: 14px;
+    font-size: 15.8px;
+    line-height: 1.55;
+    letter-spacing: -0.025em;
+  }
+
+  .solution-list {
+    margin-top: 48px;
+    gap: 52px;
+  }
+
+  .solution-card {
+    gap: 22px;
+  }
+
+  .solution-card-content h3 {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+
+  .solution-card-content p {
+    margin-top: 13px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .solution-link {
+    margin-top: 22px;
+    font-size: 15px;
+  }
+
+  .solution-link span {
+    font-size: 24px;
+  }
+
+  .solution-image-wrap {
+    height: clamp(218px, 63vw, 310px);
+  }
+}
+/* ==================== Solution Responsive: Mobile End ==================== */
+
+
+/* ==================== Solution Responsive: Small Mobile Start ==================== */
+@media (max-width: 380px) {
+  .solution-section {
+    padding-top: 52px;
+  }
+
+  .solution-container {
+    width: calc(100% - 28px);
+  }
+
+  .solution-header h2 {
+    font-size: 31px;
+  }
+
+  .solution-header p {
+    font-size: 15px;
+  }
+
+  .solution-list {
+    margin-top: 44px;
+    gap: 48px;
+  }
+
+  .solution-card-content h3 {
+    font-size: 22px;
+  }
+
+  .solution-card-content p {
+    font-size: 14.5px;
+  }
+
+  .solution-image-wrap {
+    height: 210px;
+  }
+}
+/* ==================== Solution Responsive: Small Mobile End ==================== */
+/* ==================== Agriculture Solution Section End ==================== */
